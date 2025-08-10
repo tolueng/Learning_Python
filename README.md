@@ -8,7 +8,8 @@ Welcome to your self-made coding course! This repository is designed to help you
 - Add your own notes and solutions as you learn.
 
 ## Course Structure
-- [Introduction](./introduction/README.md)
+- [Introduction](./introduction/README.md): Overview of programming, setup, and first steps.
+- [Basics of Python](./basics/README.md): Learn about Python data types, numbers, strings, and collections.
 - [More topics coming soon!]
 
 ---
