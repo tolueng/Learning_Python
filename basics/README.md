@@ -12,9 +12,10 @@ Data types define the kind of value a variable can hold. Understanding data type
 	- Examples: `5`, `-3`, `42`
 	- Usage: Counting, indexing, math operations.
 	- Tip: You can use underscores in large numbers for readability. For example, `1_000` is the same as `1000`, and `1_000_000` is the same as `1000000`.
+	- Note: Do not use leading zeros in integer literals. For example, `09` is not valid, but `9` is valid. Leading zeros are only allowed in octal numbers (e.g., `0o10`).
 
 - **float** (Floating Point): Numbers with decimals.
-	- Examples: `3.14`, `-0.5`, `2.0`
+	- Examples: `3.14`, `-0.5`, `2.0`, `1.234e12`
 	- Usage: Measurements, scientific calculations, division results.
 
 - **str** (String): Text, enclosed in quotes (single or double).
@@ -86,7 +87,84 @@ print("Product:", num1 * num2)
 print("Quotient:", num1 / num2)
 ```
 
----
+
+
+## Python Operators
+
+Operators are special symbols that perform operations on values and variables. Here are the main types with examples:
+
+### Arithmetic Operators
+```python
+a = 5
+b = 2
+print(a + b)   # Addition: 7
+print(a - b)   # Subtraction: 3
+print(a * b)   # Multiplication: 10
+print(a / b)   # Division: 2.5
+print(a // b)  # Integer division: 2
+print(a % b)   # Modulus: 1
+print(a ** b)  # Exponentiation: 25
+```
+
+### Comparison Operators
+```python
+x = 10
+y = 5
+print(x == y)   # False
+print(x != y)   # True
+print(x > y)    # True
+print(x < y)    # False
+print(x >= y)   # True
+print(x <= y)   # False
+```
+
+### Assignment Operators
+```python
+n = 3
+n += 2   # n = n + 2 -> 5
+n -= 1   # n = n - 1 -> 4
+n *= 2   # n = n * 2 -> 8
+n /= 4   # n = n / 4 -> 2.0
+n //= 2  # n = n // 2 -> 1
+n %= 2   # n = n % 2 -> 1
+n **= 3  # n = n ** 3 -> 1
+```
+
+### Logical Operators
+```python
+print(True and False)  # False
+print(True or False)   # True
+print(not True)        # False
+```
+
+### Membership Operators
+```python
+fruits = ["apple", "banana"]
+print("apple" in fruits)      # True
+print("cherry" not in fruits) # True
+```
+
+### Identity Operators
+```python
+a = [1, 2]
+
+c = [1, 2]
+print(a is b)      # True (same object)
+print(a is c)      # False (different objects with same value)
+print(a is not c)  # True
+```
+
+### Bitwise Operators
+```python
+p = 5      # 0b0101
+q = 3      # 0b0011
+print(p & q)   # AND: 1
+print(p | q)   # OR: 7
+print(p ^ q)   # XOR: 6
+print(~p)      # NOT: -6
+print(p << 1)  # Left shift: 10
+print(p >> 1)  # Right shift: 2
+```
 
 
 ## Strings in Python
@@ -168,6 +246,13 @@ print(unique_numbers)  # Output: {1, 3, 4}
 
 
 ## Cheatsheet & Tips
+
+### Operators
+- Use arithmetic operators for math: `+`, `-`, `*`, `/`, `//`, `%`, `**`.
+- Use comparison operators to compare values: `==`, `!=`, `>`, `<`, `>=`, `<=`.
+- Use logical operators for conditions: `and`, `or`, `not`.
+- Use assignment operators to update variables: `+=`, `-=`, etc.
+- Use membership (`in`, `not in`) and identity (`is`, `is not`) operators for advanced checks.
 
 ### Data Types
 - Use `type(value)` to check the type of any variable.
