@@ -13,5 +13,3 @@ Welcome to your self-made coding course! This repository is designed to help you
 - [More topics coming soon!]
 
 ---
-
-Feel free to expand this course with new topics and exercises as you progress.
